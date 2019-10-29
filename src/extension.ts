@@ -1,10 +1,10 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "helloworld-sample" is now active!');
+	console.log('Congratulations, your extension "walrus" is now active!');
 
 	let disposable = vscode.commands.registerCommand('extension.walrus', () => {
-		vscode.window.showInformationMessage('Hello World!');
+		vscode.window.showInformationMessage('Hello Walrus!');
 	});
 
 	context.subscriptions.push(disposable);

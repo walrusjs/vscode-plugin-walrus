@@ -1,47 +1,38 @@
 {
-  "name": "@walrus/vscode-plugin",
-  "displayName": "walrus",
-  "version": "0.0.1",
-  "publisher": "阿康",
-  "description": "walrus vscode plugin",
-  "main": "./lib/extension.js",
-  "keywords": [
-    "vscode",
-    "plugin",
-    "walrus"
-  ],
-  "repository": "git@github.com:walrus-plus/vscode-plugin-walrus.git",
-  "author": "wangxingkang <wang_xingkang@qq.com>",
-  "license": "MIT",
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
+	"name": "@walrus/vscode-plugin",
+	"displayName": "walrus",
+	"description": "walrus vscode plugin",
+	"version": "0.0.1",
+	"publisher": "阿康",
+	"repository": "https://github.com/walrus-plus/vscode-plugin-walrus",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.walrus"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.walrus",
+				"title": "Walrus Common"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"lint": "tslint -p ./",
 		"watch": "tsc -watch -p ./"
-  },
-  "activationEvents": [
-    "onCommand:extension.walrus"
-  ],
-  "contributes": {
-    "commands": [
-      {
-        "command": "extension.walrus",
-        "title": "Hello World"
-      }
-    ]
-  },
-  "icon": "images/logo.png",
-  "categories": [
-		"Other"
-	],
-  "engines": {
-    "vscode": "^1.33.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.39.0",
-    "@walrus/cli": "^0.2.2",
-    "father-build": "^1.14.0",
-    "typescript": "^3.6.4"
-  }
+	},
+	"devDependencies": {
+		"@types/node": "^10.14.17",
+		"@types/vscode": "^1.34.0",
+		"tslint": "^5.16.0",
+		"typescript": "^3.5.1"
+	}
 }
