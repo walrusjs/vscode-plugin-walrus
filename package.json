@@ -29,10 +29,12 @@
 		"lint": "tslint -p ./",
 		"watch": "tsc -watch -p ./"
 	},
+  "dependencies": {
+    "@walrus/cli": "^0.2.2"
+  },
 	"devDependencies": {
 		"@types/node": "^10.14.17",
 		"@types/vscode": "^1.34.0",
-		"tslint": "^5.16.0",
 		"typescript": "^3.5.1"
 	}
 }
